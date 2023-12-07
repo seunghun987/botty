@@ -15857,7 +15857,8 @@ ITEM_UNIQUE_ITEMS = {
             {
                 "min": 10,
                 "max": 30
-            }
+            },
+            "979797":71
         }
     },
     "rottingfissure":
