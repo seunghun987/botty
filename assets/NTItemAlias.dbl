@@ -941,7 +941,7 @@ NTIPAliasStat["skillbypassundead"] = 103;
 NTIPAliasStat["skillbypassdemons"] = 104;
 NTIPAliasStat["itemfastercastrate"] = 105;	NTIPAliasStat["fcr"] = 105;
 NTIPAliasStat["skillbypassbeasts"] = 106;
-NTIPAliasStat["itemphysicaldamagereceivedincreased"] = 989898;	NTIPAliasStat["pdi"] = 989898;
+NTIPAliasStat["itempdi"] = 989898;	NTIPAliasStat["pdi"] = 989898;
 
 NTIPAliasStat["itemsingleskill"] = 107;
 // Amazon skills
