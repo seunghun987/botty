@@ -35788,9 +35788,12 @@ REF_PATTERNS = {
         "passivepoismastery",
         "poisonskilldamage"
     ],
-    "PHYSICAL DAMAGE RECEIVED. INCREASED BY {:d}%": [
+    "Physical Damage Received Increased By {:d}%": [
         "itempdi",
         "pdi"
     ],
+    "Monster Physical Immunity Is Sundered" :[
+    	"mpis"
+    ]
     
 }
