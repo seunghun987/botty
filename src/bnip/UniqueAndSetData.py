@@ -1427,7 +1427,13 @@ UniqueAndSetData = {
     "grandcharm": {
         "uniques": [
             [
-                "GHEEDSFORTUNE"
+                "GHEEDSFORTUNE",
+                "BLACKCLEFT",
+                "BONEBREAK",
+                "ROTTINGFISSURE",
+                "CRACKOFTHEHEAVENS",
+                "FLAMERIFT",
+                "COLDRUPTURE"
             ]
         ]
     },

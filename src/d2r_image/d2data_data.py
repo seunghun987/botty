@@ -5982,7 +5982,7 @@ ITEM_MISC = {
         "NTIPAliasClassID": 605,
         "NTIPAliasType": 84,
         "dimensions": [1, 3],
-        "uniques": ["GHEEDSFORTUNE"]
+        "uniques": ["GHEEDSFORTUNE","BLACKCLEFT","BONEBREAK","ROTTINGFISSURE","CRACKOFTHEHEAVENS","FLAMERIFT","COLDRUPTURE"]
     },
     "greaterhealingpotion":
     {
@@ -15829,6 +15829,90 @@ ITEM_UNIQUE_ITEMS = {
             {
                 "min": 10,
                 "max": 15
+            }
+        }
+    },
+    "blackcleft":
+    {
+        "DisplayName": "Black Cleft",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "37":
+            {
+                "min": -65,
+                "max": -45
+            }
+        }
+    },
+    "bonebreak":
+    {
+        "DisplayName": "Bone Break",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "989898":
+            {
+                "min": 10,
+                "max": 30
+            }
+        }
+    },
+    "rottingfissure":
+    {
+        "DisplayName": "Rotting Fissure",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "45":
+            {
+                "min": -90,
+                "max": -70
+            }
+        }
+    },
+    "crackoftheheavens":
+    {
+        "DisplayName": "Crack of the Heavens",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "41":
+            {
+                "min": -90,
+                "max": -70
+            }
+        }
+    },
+    "flamerift":
+    {
+        "DisplayName": "Flame Rift",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "39":
+            {
+                "min": -90,
+                "max": -70
+            }
+        }
+    },
+    "coldrupture":
+    {
+        "DisplayName": "Cold Rupture",
+        "NTIPAliasClassID": 605,
+        "NTIPAliasType": 84,
+        "NTIPAliasStatProps":
+        {
+            "43":
+            {
+                "min": -90,
+                "max": -70
             }
         }
     },
