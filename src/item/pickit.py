@@ -133,7 +133,7 @@ class PickIt:
         """
         self._reset_state()
         keyboard.send(Config().char["show_items"])
-        wait(0.15, 0.25)
+        wait(0.38, 0.46)
         pickit_phase_start = time.time()
 
         items, img = self._locate_items()
