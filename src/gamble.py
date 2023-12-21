@@ -32,7 +32,7 @@ def main():
     while 1:
         if keyboard.is_pressed("f11"):
             vendor.set_gamble_status(True)
-            vendor.gamble()
+            vendor.gamble2()
             break
         time.sleep(0.02)
 
