@@ -15857,8 +15857,7 @@ ITEM_UNIQUE_ITEMS = {
             {
                 "min": 10,
                 "max": 30
-            },
-            "979797":71
+            }
         }
     },
     "rottingfissure":
@@ -35792,9 +35791,5 @@ REF_PATTERNS = {
     "Physical Damage Received Increased By {:d}%": [
         "itempdi",
         "pdi"
-    ],
-    "Monster Physical Immunity Is Sundered" :[
-    	"mpis"
     ]
-    
 }
