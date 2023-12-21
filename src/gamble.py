@@ -29,11 +29,10 @@ def main():
     print(table)
     print("\n")
 	
-	
     while 1:
-	    if keyboard.is_pressed("f11"):
-	        vendor.gamble()
-	        break
+        if keyboard.is_pressed("f11"):
+            vendor.gamble()
+            break
         time.sleep(0.02)
 
 if __name__ == "__main__":
