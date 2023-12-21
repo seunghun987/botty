@@ -63,8 +63,7 @@ class GameStats:
         skip_log = False;
         
         if  "JEWEL" in item_name and "[quality] == magic" in expression:
-            Logger.info(f"aaaaaaaaa #{all(substring not in item_name for substring in jewel_filtered_substrings)}")
-            skip_log = any(substring not in item_name for substring in jewel_filtered_substrings)
+            skip_log = all(substring not in item_name for substring in jewel_filtered_substrings)
         else:
             skip_log = any(substring in item_name for substring in filtered_substrings) or any(match == item_name.strip() for match in filtered_matches)
         

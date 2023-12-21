@@ -51,6 +51,56 @@ def repair() -> bool:
 def gamble():
     if (refresh_btn := template_finder.search_and_wait("REFRESH", threshold=0.79, timeout=4)).valid:
         #Gambling window is open. Starting to spent some coins
+        max_gamble_count = floor(2000000/188000) # leave about 500k gold and assume buying coronets at ~188k
+        while get_gamble_status() and get_gamble_count() < max_gamble_count:
+            img=grab()
+            for item in Config().char["gamble_items"]:
+                # while desired gamble item is not on screen, refresh
+                while not (desired_item := template_finder.search (item.upper(), grab(), roi=Config().ui_roi["left_inventory"])).valid:
+                    mouse.move(*refresh_btn.center_monitor, randomize=12, delay_factor=[1.0, 1.5])
+                    wait(0.1, 0.15)
+                    mouse.click(button="left")
+                    wait(0.1, 0.15)
+                # desired item found, purchase it
+                mouse.move(*desired_item.center_monitor, randomize=12, delay_factor=[1.0, 1.5])
+                wait(0.1, 0.15)
+                mouse.click(button="right")
+                wait(0.4, 0.6)
+                img=grab()
+                # make sure the "not enough gold" message doesn't exist
+                if is_visible(ScreenObjects.NotEnoughGold, img):
+                    Logger.warning(f"Out of gold, stop gambling")
+                    keyboard.send("esc")
+                    set_gamble_status(False)
+                    break
+                new_count = get_gamble_count()+1
+                Logger.debug(f"Gamble purchase {new_count}/{max_gamble_count}")
+                set_gamble_count(new_count)
+                # inspect purchased item
+                if personal.inventory_has_items(img):
+                    items = personal.inspect_items(img, close_window=False)
+                    if items:
+                        # specifically in gambling scenario, all items returned from inspect_items, which sells/drops unwanted items, are to be kept
+                        # if there is a desired item, end function and go to stash
+                        Logger.debug("Found desired item, go to stash")
+                        common.close()
+                        return items
+                if new_count >= max_gamble_count:
+                    break
+        Logger.debug(f"Finish gambling")
+        stash.set_curr_stash(gold = 0)
+        personal.set_inventory_gold_full(False)
+        if get_gamble_status():
+            set_gamble_status(False)
+        common.close()
+        return None
+    else:
+        Logger.warning("gamble: gamble vendor window not detected")
+        return False
+        
+def gamble2():
+    if (refresh_btn := template_finder.search_and_wait("REFRESH", threshold=0.79, timeout=4)).valid:
+        #Gambling window is open. Starting to spent some coins
         max_gamble_count = 100 # leave about 500k gold and assume buying coronets at ~188k
         while get_gamble_status() and get_gamble_count() < max_gamble_count:
             img=grab()
