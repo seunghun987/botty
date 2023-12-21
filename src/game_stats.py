@@ -51,8 +51,22 @@ class GameStats:
     def log_item_keep(self, item_name: str, send_message: bool, img: np.ndarray, ocr_text: str = '', expression: str = '', item_props: dict = {}):
         filtered_substrings = [" POTION", " OF IDENTIFY", " OF TOWN PORTAL", " AMETHYST", " RUBY", " TOPAZ", " EMERALD", " SAPPHIRE", " DIAMOND"]
         filtered_matches = ["DIAMOND", "AMETHYST", "RUBY", "TOPAZ", "EMERALD", "SAPPHIRE", "ARROWS", "BOLTS",
-                            "CHIPPED SKULL", "FLAWED SKULL", "SKULL", "FLAWLESS SKULL", "PERFECT SKULL"]
-        skip_log = any(substring in item_name for substring in filtered_substrings) or any(match == item_name.strip() for match in filtered_matches)
+                            "CHIPPED SKULL", "FLAWED SKULL", "SKULL", "FLAWLESS SKULL", "PERFECT SKULL",
+                            "EL RUNE", "ELD RUNE", "TIR RUNE", "NEF RUNE", 
+                            "ETH RUNE", "ITH RUNE", "TAL RUNE", "RAL RUNE", 
+                            "ORT RUNE", "THUL RUNE", "AMN RUNE", "SOL RUNE", 
+                            "SHAEL RUNE", "DOL RUNE", "HEL RUNE", "IO RUNE", 
+                            "LUM RUNE", "KO RUNE", "FAL RUNE"]
+        jewel_filtered_substrings = ["RUBY JEWEL OF", "SCINTILLATING JEWEL OF FERVOR", "ARGENT JEWEL OF FERVOR", "VERMILION JEWEL OF",
+                                     "CRIMSON JEWEL OF", "CARMINE JEWEL OF CARNAGE", "RUSTY JEWEL OF CARNAGE", "RUSTY JEWEL OF WRATH",
+                                     "JEWEL OF ENVY"]
+        skip_log = False;
+        
+        if item_name in "JEWEL" and expression in "[quality] == magic]":
+            skip_log = any(substring not in item_name for substring in jewel_filtered_substrings)
+        else:
+            skip_log = any(substring in item_name for substring in filtered_substrings) or any(match == item_name.strip() for match in filtered_matches)
+        
         if self._location is not None and not skip_log:
             Logger.debug(f"Stashed and logged: {item_name}")
             self._location_stats[self._location]["items"].append(item_name)
