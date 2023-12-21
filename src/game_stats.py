@@ -59,7 +59,7 @@ class GameStats:
                             "LUM RUNE", "KO RUNE", "FAL RUNE"]
         jewel_filtered_substrings = ["RUBY JEWEL OF", "SCINTILLATING JEWEL OF FERVOR", "ARGENT JEWEL OF FERVOR", "VERMILION JEWEL OF",
                                      "CRIMSON JEWEL OF", "CARMINE JEWEL OF CARNAGE", "RUSTY JEWEL OF CARNAGE", "RUSTY JEWEL OF WRATH",
-                                     "JEWEL OF ENVY", "LIGHTNING"]
+                                     "JEWEL OF ENVY"]
         skip_log = False;
         
         if  "JEWEL" in item_name and "[quality] == magic" in expression:
