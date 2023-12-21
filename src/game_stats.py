@@ -59,12 +59,10 @@ class GameStats:
                             "LUM RUNE", "KO RUNE", "FAL RUNE"]
         jewel_filtered_substrings = ["RUBY JEWEL OF", "SCINTILLATING JEWEL OF FERVOR", "ARGENT JEWEL OF FERVOR", "VERMILION JEWEL OF",
                                      "CRIMSON JEWEL OF", "CARMINE JEWEL OF CARNAGE", "RUSTY JEWEL OF CARNAGE", "RUSTY JEWEL OF WRATH",
-                                     "JEWEL OF ENVY"]
+                                     "JEWEL OF ENVY", "LIGHTNING"]
         skip_log = False;
         
-        Logger.info(f"aaaaaaaaa #{expression}")
         test = "JEWEL" in item_name
-        Logger.info(f"aaaaaaaaa #{test}")
        
         if  "JEWEL" in item_name and "[quality] == magic" in expression:
             Logger.info(f"aaaaaaaaa #{any(substring not in item_name for substring in jewel_filtered_substrings)}")
