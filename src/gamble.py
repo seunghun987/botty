@@ -28,12 +28,13 @@ def main():
     table.columns.header = ["hotkey", "action"]
     print(table)
     print("\n")
-
+	
+	
 	while 1:
 	    if keyboard.is_pressed("f11"):
 	        vendor.gamble()
 	        break
-	    time.sleep(0.02)
+        time.sleep(0.02)
 
 if __name__ == "__main__":
     # To avoid cmd just closing down, except any errors and add a input() to the end
