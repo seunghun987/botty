@@ -30,7 +30,7 @@ def main():
     print("\n")
 	
 	
-	while 1:
+    while 1:
 	    if keyboard.is_pressed("f11"):
 	        vendor.gamble()
 	        break
