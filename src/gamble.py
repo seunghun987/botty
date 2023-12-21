@@ -31,7 +31,6 @@ def main():
 
     if keyboard.is_pressed("f11"):
         vendor.gamble()
-        break
 
 if __name__ == "__main__":
     # To avoid cmd just closing down, except any errors and add a input() to the end
