@@ -62,7 +62,8 @@ class GameStats:
                                      "JEWEL OF ENVY"]
         skip_log = False;
         
-        if item_name in "JEWEL" and expression in "[quality] == magic]":
+        Logger.info(f"aaaaaaaaa #{expression}")
+        if  "JEWEL" in item_name and "[quality] == magic]" in expression:
             Logger.info(f"aaaaaaaaa #{any(substring not in item_name for substring in jewel_filtered_substrings)}")
             skip_log = any(substring not in item_name for substring in jewel_filtered_substrings)
         else:
