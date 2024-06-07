@@ -9,14 +9,14 @@
 //================= Utility ================
 //------------------------------------------
 
-[Type] == Gold # [Gold] >= 5000
+[Type] == Gold # [Gold] >=1000 
 //[Name] == Scrolloftownportal
 //[Name] == Scrollofidentify
 
 //------------------------------------------------
 //================= Unique Charms ================
 //------------------------------------------------
-[Name] == Grandcharm && [Quality] == Unique # [Itemgoldbonus] >= 140 && [Itemmagicbonus] >= 35
+//[Name] == Grandcharm && [Quality] == Unique # [Itemgoldbonus] >= 140 && [Itemmagicbonus] >= 35
 [Idname] == blackcleft # [Magicresist] == -45
 [Idname] == bonebreak # [pdi] == 10
 [Idname] == rottingfissure # [Poisonresist] == -70
@@ -24,7 +24,7 @@
 [Idname] == flamerift # [Fireresist] == -70
 [Idname] == coldrupture # [Coldresist] == -70
 
-//[Name] == Grandcharm && [Quality] == Unique
+[Name] == Grandcharm && [Quality] == Unique
 //[Name] == Grandcharm && [Quality] == Unique     // Gheed's Fortune
 //[Name] == Grandcharm && [Quality] == Unique # [Itemgoldbonus] >= 140 && [Itemmagicbonus] >= 35
 //[Name] == Smallcharm && [Quality] == Unique     // Annihilus Charm
@@ -34,10 +34,10 @@
 //------------------------------------------
 
 //[Name] == Greaterhealingpotion
-[Name] == Greatermanapotion
-[Name] == Superhealingpotion
-[Name] == Supermanapotion
-//[Name] == Rejuvenationpotion
+//[Name] == Greatermanapotion
+//[Name] == Superhealingpotion
+//[Name] == Supermanapotion
+[Name] == Rejuvenationpotion
 [Name] == Fullrejuvenationpotion
 
 //----------------------------------------
@@ -61,7 +61,7 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Korune && [Name] <= Zodrune
+[Name] >= Lemrune && [Name] <= Zodrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Tirrune
@@ -76,25 +76,25 @@
 //[Name] == Solrune
 //[Name] == Shaelrune
 //[Name] == Dolrune
-//[Name] == Helrune
+[Name] == Helrune
 //[Name] == Iorune
 //[Name] == Lumrune
 //[Name] == Korune
 //[Name] == Falrune
-//[Name] == Lemrune
-//[Name] == Pulrune
-//[Name] == Umrune
-//[Name] == Malrune
-//[Name] == Istrune
-//[Name] == Gulrune
-//[Name] == Vexrune
-//[Name] == Ohmrune
-//[Name] == Lorune
-//[Name] == Surrune
-//[Name] == Berrune
-//[Name] == Jahrune
-//[Name] == Chamrune
-//[Name] == Zodrune
+[Name] == Lemrune
+[Name] == Pulrune
+[Name] == Umrune
+[Name] == Malrune
+[Name] == Istrune
+[Name] == Gulrune
+[Name] == Vexrune
+[Name] == Ohmrune
+[Name] == Lorune
+[Name] == Surrune
+[Name] == Berrune
+[Name] == Jahrune
+[Name] == Chamrune
+[Name] == Zodrune
 
 //---------------------------------------
 //================= Gems ================
@@ -907,7 +907,7 @@
 ([Name] == Suwayyah || [Name] == FeralClaws || [Name] == RunicTalons || [Name] == GreaterTalons || [Name] == GreaterClaws) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [SkillLightningsentry] >= 3 && [Skillmindblast] >= 3 && ([Skillweaponblock] >= 2 || [Skillclawmastery] >= 2 || [Skillfade] >= 2 || [Skillvenom] >= 2 || [Skillbladeshield] >= 2 || [Skilldragonflight] >= 2) && [Sockets] == 3  // Chaos Socketed
 ([Name] == Suwayyah || [Name] == FeralClaws || [Name] == RunicTalons || [Name] == GreaterTalons || [Name] == GreaterClaws) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [SkillLightningsentry] >= 3 && [Skillvenom] >= 3 && ([Skillweaponblock] >= 2 || [Skillclawmastery] >= 2 || [Skillfade] >= 2  || [Skillbladeshield] >= 2 || [Skilldragonflight] >= 2 || [Skillmindblast] >= 1) && [Sockets] ==  0 // Chaos
 ([Name] == Suwayyah || [Name] == FeralClaws || [Name] == RunicTalons || [Name] == GreaterTalons || [Name] == GreaterClaws) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [SkillLightningsentry] >= 3 && [Skillvenom] >= 3 && ([Skillweaponblock] >= 2 || [Skillclawmastery] >= 2 || [Skillfade] >= 2  || [Skillbladeshield] >= 2 || [Skilldragonflight] >= 2 || [Skillmindblast] >= 1) && [Sockets] == 3  // Chaos Socketed
-([Name] == Greatertalons || [Name] == Runictalons) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Skillphoenixstrike] >=1
+([Name] == GreaterTalons || [Name] == RunicTalons) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Skillphoenixstrike] >=1
 //-----------------------------------------------
 //================= Staves Bases ================
 //-----------------------------------------------
@@ -1392,7 +1392,7 @@
 [Name] == Grimhelm && [Quality] == Unique && [Flag] != Ethereal # [Lifeleech] >= 6 && [Manaleech] >= 6 && [Magicdamagereduction] >= 10 && [Damageresist] >= 15    // Vampire Gaze
 [Name] == Grimhelm && [Quality] == Unique && [Flag] == Ethereal # [Lifeleech] >= 6 && [Manaleech] >= 6 && [Magicdamagereduction] >= 10 && [Damageresist] >= 15    // Eth Vampire Gaze
 [Name] == Grimhelm && [Quality] == Unique && [Flag] == Ethereal # [Lifeleech] == 8 && [Manaleech] == 8 && [Magicdamagereduction] == 15 && [Damageresist] == 20    // Eth Vampire Gaze Perfect
-[Name] == Shako && [Quality] == Unique && [Flag] != Ethereal # [Defense] >= 140     // Harlequin Crest Shako
+[Name] == Shako && [Quality] == Unique && [Flag] != Ethereal # [Defense] >= 100     // Harlequin Crest Shako
 [Name] == Shako && [Quality] == Unique && [Flag] != Ethereal # [Defense] >= 141     // Harlequin Crest Shako Perfect
 //[Name] == Armet && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 100 && [Manaleech] >= 4     // Steel Shade
 //[Name] == Spiredhelm && [Quality] == Unique && [Flag] != Ethereal # [Allres] >= 50       // Veil Of Steel
