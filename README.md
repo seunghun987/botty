@@ -15,7 +15,7 @@ All settings will automatically be set when you execute `main.exe` and press the
 
 Check the documentation for **params.ini** further down. Different Sorc builds, Hammerdin, Barb, Trapsin are already implemented to different extents. It is quite straightforward to implement new classes. Give it a go if you like!
 
-### 3) Start Location
+### 3) Start Location 
 
 Open up D2R and wait till you are at the hero selection screen. Make sure the char you running with is selected and will be in any of Act 3, 4 or 5 in the respective difficulty you set in the **params.ini** once the bot starts the game.
 
