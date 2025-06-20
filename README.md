@@ -1,5 +1,5 @@
 # <img src="assets/docs/header_green.png" width="370">
-
+ 
 Pixelbot for Diablo 2 Resurrected. This project is for informational and educational purposes only.
 
 ## Getting started & Prerequisites
