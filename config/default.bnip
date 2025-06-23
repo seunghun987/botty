@@ -4,12 +4,12 @@
 //==================================================================//
 //<<<<<<<<<<<<<<<<<<<<<<<<<<++++ Misc ++++>>>>>>>>>>>>>>>>>>>>>>>>>>//
 //==================================================================//
-[Name] == Jewel && [Quality] == Magic //매직쥬얼
+//[Name] == Jewel && [Quality] == Magic //매직쥬얼
 //------------------------------------------
 //================= Utility ================
 //------------------------------------------
 
-[Type] == Gold # [Gold] >=1000 
+[Type] == Gold # [Gold] >=100 
 //[Name] == Scrolloftownportal
 //[Name] == Scrollofidentify
 
@@ -71,16 +71,16 @@
 //[Name] == Talrune
 [Name] == Ralrune
 //[Name] == Ortrune
-//[Name] == Thulrune
+[Name] == Thulrune
 [Name] == Amnrune
-//[Name] == Solrune
+[Name] == Solrune
 //[Name] == Shaelrune
 //[Name] == Dolrune
 [Name] == Helrune
-//[Name] == Iorune
-//[Name] == Lumrune
-//[Name] == Korune
-//[Name] == Falrune
+[Name] == Iorune
+[Name] == Lumrune
+[Name] == Korune
+[Name] == Falrune
 [Name] == Lemrune
 [Name] == Pulrune
 [Name] == Umrune
@@ -1420,7 +1420,7 @@
 //[Name] == Studdedleather && [Quality] == Unique && [Flag] != Ethereal # [Defense] == 60        // Twitchthroe Perfect
 //[Name] == Ghostarmor && [Quality] == Unique && [Flag] != Ethereal # [Magicdamagereduction] >= 7     // The Spirit Shroud
 [Name] == Ghostarmor && [Quality] == Unique && [Flag] != Ethereal # [Magicdamagereduction] == 11     // The Spirit Shroud Perfect
-[Name] == Serpentskinarmor && [Quality] == Unique && [Flag] != Ethereal # [Magicdamagereduction] >= 9 && [Allres] >= 30     // Skin Of The Vipermagi
+[Name] == Serpentskinarmor && [Quality] == Unique && [Flag] != Ethereal # [Magicdamagereduction] >= 1 && [Allres] >= 20     // Skin Of The Vipermagi
 [Name] == Serpentskinarmor && [Quality] == Unique && [Flag] != Ethereal # [Magicdamagereduction] == 13 && [Allres] == 35     // Skin Of The Vipermagi Perfect
 //[Name] == Cuirass && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 160       // Duriel's Shell
 [Name] == Cuirass && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] >= 160       // Eth Duriel's Shell
